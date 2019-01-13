@@ -2,10 +2,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PersonList implements View {
-    List<Person> personList = new ArrayList<>();
+    private List<Person> personList = new ArrayList<>();
 
     public List<Person> getPersonList() {
         return personList;
+    }
+
+    public void addPerson(Person person) {
+        personList.add(person);
     }
 
     @Override
@@ -27,6 +31,6 @@ public class PersonList implements View {
             int h = person.getHeight();
             s+= String.format("%-15s %-12s %3d\n", n, i, h);
         }
-        return null;
+        return s;
     }
 }
