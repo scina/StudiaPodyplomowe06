@@ -7,5 +7,9 @@ public class Main {
         PrintView printView = new PrintView(personList);
         printView.printView();
 
+        for(Person person : personList.getPersonList()) {
+            person.getName();
+        }
+
     }
 }
